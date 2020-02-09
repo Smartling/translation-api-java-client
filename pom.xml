@@ -171,4 +171,24 @@
     <junit-version>4.8.1</junit-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+    <profiles>
+        <profile>
+            <id>publish</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <distributionManagement>
+                <repository>
+                    <id>releases-repo</id>
+                    <url>https://artifactory.smartling.net/artifactory/local-releases</url>
+                </repository>
+                <snapshotRepository>
+                    <id>snapshot-repo</id>
+                    <url>https://artifactory.smartling.net/artifactory/local-snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
 </project>
