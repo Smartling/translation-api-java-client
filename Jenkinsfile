@@ -8,21 +8,21 @@ pipeline {
     }
 
     stages {
-        stage('Run tests & Junit report') {
-            agent {
-                label 'master'
-            }
-
-            steps {
-                sh '/opt/apache-maven-3.3.9/bin/mvn clean test'
-                stash 'test-results'
-            }
-            post {
-                always {
-                    junit "**/surefire-reports/*.xml"
-                }
-            }
-        }
+//        stage('Run tests & Junit report') {
+//            agent {
+//                label 'master'
+//            }
+//
+//            steps {
+//                sh '/opt/apache-maven-3.3.9/bin/mvn clean test'
+//                stash 'test-results'
+//            }
+//            post {
+//                always {
+//                    junit "**/surefire-reports/*.xml"
+//                }
+//            }
+//        }
 
 //        stage('Sonar: scan') {
 //            agent {
